@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #242e77;
+  color: #333;
+  font: 16px/1.4 'Roboto', sans-serif;
+  padding: 3%;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+header {
+  margin: 0 0 50px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 42px;
+  color: #fff;
+  margin: 0 0 30px;
+}
+
+header button {
+  font: bold 20px/1.6 'Roboto', sans-serif;
+  color: #074473;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+#people {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+#people div {
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+#people img {
+  width: 100%;
+  height: 220px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+#people span {
+  font-size: 14px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background: #074473;
+}
+
+#people h2 {
+  font-size: 20px;
+  margin: 0 0 5px;
+}
+
+#people h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+@media screen and (max-width: 1023px) {
+  #people {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  #people {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 499px) {
+  #people {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
